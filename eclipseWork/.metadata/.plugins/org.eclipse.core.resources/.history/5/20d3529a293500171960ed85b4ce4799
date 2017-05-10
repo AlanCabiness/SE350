@@ -1,0 +1,27 @@
+package mdtrmQ3;
+
+public class MainMethod {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Group apple = new Group("Apple");
+		Group mac = new Group("Macintosh");
+		Person tim = new Person("Tim","BigBoss",1);
+		apple.add(tim);
+		Person alice = new Person("Alice", "Manager", 2000);
+		Person bob = new Person("Bob", "Worker", 35);
+		mac.add(alice);
+		mac.add(bob);
+		apple.add(mac);
+		for (Unit c : apple) {
+			if (c.getClass() == Person.class) {
+				System.out.println(c);
+			}
+			else {
+				System.out.println(c);
+			}
+		}
+		return sum;
+	}
+
+}

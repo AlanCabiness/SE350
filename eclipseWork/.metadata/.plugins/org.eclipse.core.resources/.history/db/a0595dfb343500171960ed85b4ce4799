@@ -1,0 +1,5 @@
+package mdtrmQ4;
+
+public interface Strategy {
+
+}
