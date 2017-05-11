@@ -1,9 +1,7 @@
-package mdtrmQ4;
+package mdtrmQ6;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import mdtrmQ4.Unit;
 
 /** A group of people and/or sub-groups. */
 

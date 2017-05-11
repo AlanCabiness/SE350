@@ -5,40 +5,35 @@ public class Person implements Unit {
 	private String _name; // Name
 	private String _title; // Title is "BigBoss" or "Manager" or "Worker"
 	private double _basePay; // Hourly or weekly pay
-
+	private double _comp;
+	
 	public Person(String name, String title, double basePay) {
 		_name = name;
 		_title = title;
 		_basePay = basePay;
+		if (_title.equals("BigBoss")){
+			BigBoss bb = new BigBoss(name, basePay);
+			_comp = bb.getYComp();
+			_name = bb.toString();
+		}
+		else if (_title.equals("Manager")){
+			Manager m = new Manager(name, basePay);
+			_comp = m.getYComp();
+			_name = m.toString();
+		}
+		else if (_title.equals("Worker")){
+			Worker w = new Worker(name, basePay);
+			_comp = w.getYComp();
+			_name = w.toString();
+		}
+		
 	}
 
 	public double getYComp() {
-		if (_title.equals("BigBoss")) {
-			return _basePay * 52 + 5000000;
-		} 
-		else if (_title.equals("Manager")) {
-			return _basePay * 52;
-		} 
-		else if (_title.equals("Worker")) {
-			return _basePay * 52 * 40;
-		} 
-		else {
-			throw new Error("This should not happen.");
-		}
+		return _comp;
 	}
 
 	public String toString() {
-		if (_title.equals("BigBoss")) {
-			return _name.toUpperCase();
-		} 
-		else if (_title.equals("Manager")) {
-			return _name;
-		} 
-		else if (_title.equals("Worker")) {
-			return _name.toLowerCase();
-		} 
-		else {
-			throw new Error("This should not happen.");
-		}
+		return _name;
 	}
 }
