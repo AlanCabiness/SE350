@@ -1,0 +1,25 @@
+package mdtrmQ5;
+
+public class personFactory {
+	public static IPerson createPerson(String personType) {
+		IPerson person;
+		if (personType.equals("BigBoss")) { 
+			person = new bigBoss();
+			//return _basePay*52 + 5000000;         
+			}         
+		else if (personType.equals("Manager")) { 
+			person = new manager();
+			//return _basePay*52;         
+			}         
+		else if (personType.equals("Worker")) {
+			person = new worker();
+			//return _basePay*52*40;  
+			}        
+		else {             
+			throw new Error("This should not happen.");         
+			}
+		
+		return null;
+	}
+
+}

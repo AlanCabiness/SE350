@@ -1,0 +1,11 @@
+package Question6.GroupStuff;
+
+/**
+ * Created by Alejandro on 5/9/2017.
+ */
+public class GroupBuilder {
+    public static Group buildGroup(String name){
+        Group group = new Group(name);
+        return group;
+    }
+}

@@ -1,0 +1,11 @@
+package Question6.GroupStuff;
+
+/**
+ * Created by Alejandro on 5/9/2017.
+ */
+public class ChildBuilder {
+    public static Group childBuilder(Group groupName, Person personName){
+        groupName.add(personName);
+        return groupName;
+    }
+}

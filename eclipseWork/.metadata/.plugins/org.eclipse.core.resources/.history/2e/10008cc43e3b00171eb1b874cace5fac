@@ -1,0 +1,10 @@
+package MovieTicketManagement;
+
+public class Movie implements IMovie {
+	int tickets = 10;
+	float price;
+	
+	
+	
+	
+}

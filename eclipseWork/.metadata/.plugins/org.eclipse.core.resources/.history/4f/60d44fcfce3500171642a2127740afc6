@@ -1,0 +1,6 @@
+package Question6.GroupStuff;
+
+public interface Unit {
+	public double getYComp(); // Yearly compensation 
+	public String toString();
+}

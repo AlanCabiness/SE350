@@ -1,0 +1,9 @@
+package mdtrmQ5;
+
+public class Worker implements IPerson {
+	public String getTitle(){
+		return "Worker";
+	}
+	public double getTitleAmount(){
+		return basePay*52*40; 
+}

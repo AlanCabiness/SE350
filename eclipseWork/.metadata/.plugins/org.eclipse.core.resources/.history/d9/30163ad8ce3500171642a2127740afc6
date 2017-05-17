@@ -1,0 +1,29 @@
+package mdtrmQ6;
+
+import Question5.PersonStuff.Unit;
+
+import java.util.ArrayList;
+
+class Group implements Unit{
+	private String _name;
+	private ArrayList<Unit> _children;
+	Group(String name){
+		_name = name;
+		_children = new ArrayList<Unit>();
+	}
+	void add(Unit n){
+		_children.add(n);
+	}
+	public double getYComp() {
+		double groupComp = 0;
+		for (Unit c:_children){
+			groupComp += c.getYComp();
+		}
+		return groupComp;
+	}
+	public String toString() {
+		return _name;
+	}
+	
+}
+

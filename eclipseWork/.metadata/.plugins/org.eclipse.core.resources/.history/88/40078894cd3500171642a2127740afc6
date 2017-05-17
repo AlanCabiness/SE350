@@ -1,0 +1,10 @@
+package mdtrmQ5;
+
+public class Manager implements IPerson {
+	public String getTitle(){
+		return "BigBoss";
+	}
+	public double getTitleAmount(){
+		return basePay1*52;
+	}
+}

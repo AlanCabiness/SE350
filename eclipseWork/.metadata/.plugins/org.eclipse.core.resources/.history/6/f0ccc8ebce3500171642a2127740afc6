@@ -1,0 +1,8 @@
+package mdtrmQ6;
+
+public class GroupBuilder {
+    public static Group buildGroup(String name){
+        Group group = new Group(name);
+        return group;
+    }
+}

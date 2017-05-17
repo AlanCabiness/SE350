@@ -1,0 +1,41 @@
+package MovieTicketManagement;
+
+public class Movie implements IMovie {
+	int tickets = 10;
+	float price;
+	Context context;
+	String currentState;
+
+	public Movie() {
+		context = new Context();
+		NotOnSaleState noss = new NotOnSaleState();
+		noss.doAction(context);
+		currentState = context.getState().toString();
+	}
+
+	public String buyTickets(int quantity) {
+		if (quantity > tickets) {
+			return "Not enough tickets left";
+		} else if (currentState.equals("Not On Sale")) {
+			return "Not yet on sale";
+		} else if (currentState.equals("On Sale")) {
+			tickets -= quantity;
+			if (tickets == 0) {
+				SoldOutState sos = new SoldOutState();
+				sos.doAction(context);
+				currentState = context.getState().toString();
+				return "Here are your tickets";
+			} else {
+				return "Here are your tickets";
+			}
+		}
+
+		else if (currentState.equals("Sold Out")) {
+			return "Sold out";
+		}
+		else{
+			return "shits fucked";
+		}
+	}
+
+}

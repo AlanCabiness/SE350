@@ -1,0 +1,6 @@
+package mdtrmQ5;
+
+public interface IPerson {
+	public double getTitleAmount();
+	public String getTitle();
+}

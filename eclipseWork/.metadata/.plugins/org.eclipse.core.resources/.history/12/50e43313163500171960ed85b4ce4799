@@ -1,6 +1,0 @@
-package mdtrmQ2.copy;
-
-public interface Unit {
-	 public double getYComp(); // Yearly compensation
-	 public String toString();
-	}
