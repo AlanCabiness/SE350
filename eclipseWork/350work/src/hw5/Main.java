@@ -1,0 +1,10 @@
+package hw5;
+
+public class Main {
+	public static void main(String[]args){
+		System.out.println("1."); B objb=new C();
+		System.out.println("2."); objb.m();
+		System.out.println("3."); ((C)objb).f();
+		System.out.println("4."); objb.s();
+	}
+}

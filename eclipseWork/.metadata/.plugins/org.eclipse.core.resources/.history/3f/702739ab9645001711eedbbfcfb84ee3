@@ -1,17 +1,11 @@
 package MovieTicketManagement;
 
-import java.util.ArrayList;
-
 public class Movie implements IMovie, IMovieSubscription {
 	int tickets = 10;
 	float price = 10;
 	Context context;
 	String currentState;
 	String type;
-	String movieName;
-	String director;
-	String executiveProducer;
-	ArrayList<String> actors;
 
 	public Movie(String type) {
 		this.context = new Context();

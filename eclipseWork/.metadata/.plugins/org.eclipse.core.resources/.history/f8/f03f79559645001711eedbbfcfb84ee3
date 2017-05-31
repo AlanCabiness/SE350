@@ -1,0 +1,12 @@
+package hw6;
+
+import java.util.ArrayList;
+
+public class Movie {
+	String movieName;
+	String director;
+	String executiveProducer;
+	ArrayList<String> actors;
+	
+	
+}
